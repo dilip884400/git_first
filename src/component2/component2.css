@@ -1,0 +1,30 @@
+.button {
+    padding: 25px;
+    background-color: rgb(167, 121, 210);
+    border-radius: 10px;
+    margin-left: 210px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+ }
+ 
+  
+ img {
+     height: 660px;
+     width: 730px;
+ 
+ }
+ .parent {
+     border: 1px solid black;
+     margin: 1rem;
+     padding: 2rem 2rem;
+     text-align: center;
+ 
+    
+   }
+   .child {
+     display: inline-block;
+     vertical-align: middle;
+     
+    
+   }
+ 

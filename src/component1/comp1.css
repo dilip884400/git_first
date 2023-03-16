@@ -1,0 +1,15 @@
+.limit {
+    background-color: rgb(12, 46, 46);
+    margin: auto;
+    text-align: center;
+    height: 647px;
+}
+.input {
+    margin-top: 220px;
+    font-size: 50px;
+    border-radius: 10px;
+}
+h3 {
+    font-size: 50px;
+    color: antiquewhite;
+}
