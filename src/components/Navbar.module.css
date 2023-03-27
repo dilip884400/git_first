@@ -1,0 +1,27 @@
+.sum{
+    display: flex;
+    justify-content:end ;
+    align-items: center;
+    background-color: rgb(8, 11, 28);
+}
+.ul {
+    display: flex;
+    margin: 25px;
+    list-style-type:none
+}
+.item{
+    display: flex;
+}
+.li{
+    margin-left: 60px;
+    margin-right: 60px;
+    font-size: 25px;
+    font-weight: bold;
+
+    
+}
+.p{
+    text-align:inherit;
+    padding-left: 15px;
+    color: rgb(0, 0, 0);
+}
