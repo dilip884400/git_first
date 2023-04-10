@@ -1,0 +1,32 @@
+.main{
+   border: 2px solid black;
+   padding: 20px;
+   text-align: center;
+   background-color:bisque
+
+
+}
+.h1{
+    background-color: rgb(135, 174, 202);
+    color: purple;
+    border-radius: 10px;
+    padding: 20px;
+ 
+    
+    
+}
+
+ul {
+    list-style-type: none
+      
+}
+ul li{
+    font-size: 30px;
+}
+.btn{
+    padding: 12px;
+    margin-left: 38px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+}
