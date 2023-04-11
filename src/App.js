@@ -1,25 +1,67 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState, useEffect} from "react";
+import './App.css'
 
-function App() {
+
+export default function App() {
+
+  // "4": [
+  //   "getposts form https://jsonplaceholder.typicode.com/posts",
+  //   "show on table",
+  //   "add remove button",
+  //   "delete post when click on remove button"
+  // ]
+
+  const [post , setPost] = useState([]);
+  // const [newData,setNewData]=useState([])
+  useEffect(()=>{
+    fetch("https://jsonplaceholder.typicode.com/posts")
+    .then((resp) => resp.json())
+    .then((res)=>setPost(res))
+  },[])
+
+console.log(post)
+
+const handelDelete=(Id)=>{
+
+  const newData = post.filter((ele)=>ele.id != Id);
+  setPost(newData)
+
+}
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+ 
+      <table className="table">
+      <thead>
+        <tr>
+    <td>ID</td>
+    <td>UserId</td>
+    <td>Title</td>
+    <td>Body</td>
+    <td>Action</td>
+        </tr>
+      </thead>
+
+<tbody className="table">
+
+{
+
+post.map((post)=>{
+
+  return(
+    <tr >
+    <td >{post.id}</td>
+    <td>{post.userId}</td>
+    <td>{post.title}</td>
+    <td>{post.body}</td>
+      <td onClick={()=>handelDelete(post.id)}>❌</td>
+    </tr>
+  )
+})
+
+}
+</tbody>
+      </table>  
     </div>
   );
 }
-
-export default App;
